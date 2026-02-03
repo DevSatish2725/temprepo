@@ -26,12 +26,48 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+       <Tabs.Screen
+        name="clients"
         options={{
-          title: "Explore",
+          title: "Clients",
           tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="paperplane.fill" color={color} />
+            <IconSymbol size={28} name="person.2.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="billing"
+        options={{
+          title: "Billing",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="creditcard.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="payments"
+        options={{
+          title: "Payments",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="wallet.pass.fill" color={color} />
+          ),
+        }}
+      />
+       <Tabs.Screen
+        name="attendance"
+        options={{
+          title: "Attendance",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="checkmark.circle.fill" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="gearshape.fill" color={color} />
           ),
         }}
       />
