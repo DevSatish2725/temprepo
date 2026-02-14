@@ -1,29 +1,13 @@
 import { Text, View } from "react-native";
-import { useSelector } from "react-redux";
-import { user } from "./redux/slices/authSlice";
+import { Stack } from "expo-router";
 
 export default function Profile() {
-  const userDetail = useSelector(user);
-    const renderUI = () => {
-        if (userDetail) {
-            return (
-                <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-
-                    <Text style={{ fontSize: 24, fontWeight: "bold" }}>Welcome, {userDetail.name}!</Text>
-                    <Text style={{ fontSize: 18, color: "gray" }}>{userDetail.email}</Text>
-                </View>
-            );
-        } else {
-            return (
-                <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-                    <Text style={{ fontSize: 18, color: "gray" }}>Login</Text>
-                </View>
-            );
-       }
-    }
-  return (
+    return (
+        <>
+        <Stack.Screen options={{ title: "My Profile" }} />   {/* To change default page header name */}
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-            {renderUI()}
+            <Text>Profile</Text>
     </View>
+      </>
   );
 }
